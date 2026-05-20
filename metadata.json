@@ -1,0 +1,6 @@
+{
+  "name": "OceanCatch",
+  "description": "An AI-powered sea fishing companion to identify species from photos and track your marine harvests.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["AI Species Identification", "Digital Harvest Album"]
+}

@@ -1,0 +1,48 @@
+{
+  "entities": {
+    "Harvest": {
+      "title": "Harvest",
+      "description": "A record of a caught sea creature.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "speciesName": { "type": "string" },
+        "speciesNameZh": { "type": "string" },
+        "scientificName": { "type": "string" },
+        "description": { "type": "string" },
+        "descriptionZh": { "type": "string" },
+        "habitat": { "type": "string" },
+        "habitatZh": { "type": "string" },
+        "funFact": { "type": "string" },
+        "funFactZh": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "caughtAt": { "type": "string", "format": "date-time" },
+        "isPublic": { "type": "boolean" }
+      },
+      "required": ["userId", "speciesName", "imageUrl", "caughtAt"]
+    },
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Public profile information for a user.",
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "type": "string"
+        },
+        "photoURL": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "harvests/{harvestId}": {
+      "schema": "Harvest",
+      "description": "Collection of fishing harvests."
+    },
+    "users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile data."
+    }
+  }
+}
